@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 type Movie = {
     title: string;
     description: string,
@@ -10,18 +12,20 @@ type Movies = {
     image: string}[]
 
 const MovieGrid = (movies : {movies: Movies}) => {
-    console.log(movies)
+    
     return(
-        <div className="flex flex-col md:flex-row gap-20 bg-zinc-900 rounded-sm mt-8 justify-center">
+        <div className="justify-center">
+        <div className="grid grid-cols-1 md:grid-cols-3 bg-zinc-900 place-items-center mt-20">
             {movies.movies.map((movie : Movie) => {
-                return(
-                <div className="w-[200px] h-[280]" key={movie.title}>
-                    <img className="h-[280px] w-[200px] rounded-md" src={movie.image} alt="image" />
-                    <div className="text-white">{movie.title}</div>
-                    <div className="text-white ">{movie.description}</div>
+                return(   
+                <div className="bg-zinc-900 w-[300px]" key={movie.title}>
+                        <Link to={`movie/${movie.title}`}>
+                            <img className="rounded-md" src={movie.image} alt="thumbnail" />
+                        </Link>
                 </div>
                 )
             })}
+        </div>
         </div>
     )
 }
