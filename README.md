@@ -1,5 +1,7 @@
 # Blummio-Test
 
+Deployed project: https://blummio-test.vercel.app/
+
 Local Set Up
 
 You'll need to have a modern Browser, Git and NodeJS installed in your machine for this app to work locally. When you meet those requirements proceed with the steps bellow.
