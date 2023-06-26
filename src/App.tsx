@@ -23,7 +23,7 @@ const router = createBrowserRouter([
 function App() {
 
   return (
-  <div className='bg-zinc-900 h-screen w-screen'>
+  <div className='bg-zinc-900 h-[100hv] pb-5 w-screen'>
     <TopBar/>
     <RouterProvider router={router} />
   </div>
