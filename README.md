@@ -22,4 +22,4 @@ npm install
 
 npm run dev
 
-The app will launch on your default browser.
+Open the adress after Local. Example: "Local: http://127.0.0.1:5173/"
